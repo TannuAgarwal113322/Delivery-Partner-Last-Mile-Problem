@@ -1,0 +1,29 @@
+-- Create user
+CREATE USER GETCASH IDENTIFIED BY GETCASH;
+
+-- Grant basic permissions
+GRANT CONNECT, RESOURCE TO GETCASH;
+
+-- Allow table creation
+ALTER USER GETCASH QUOTA UNLIMITED ON USERS;
+
+CREATE TABLE GETCASH_USER (
+    ID NUMBER PRIMARY KEY,
+    USERNAME VARCHAR2(100) NOT NULL UNIQUE,
+    PASSWORD VARCHAR2(255) NOT NULL
+);
+
+
+CREATE SEQUENCE GETCASH_USER_SEQ
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;
+
+
+
+alter table GETCASH_USER add role_primary varchar2(10);
+alter table GETCASH_USER add temporary_role varchar2(10);
+alter table GETCASH_USER add location_info varchar2(10);
+
+

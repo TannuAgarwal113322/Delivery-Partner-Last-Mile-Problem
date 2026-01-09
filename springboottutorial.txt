@@ -1,0 +1,28 @@
+lecture spring boot 1-10 durgesh
+
+1...@SpringBootApplication is the combination of the three 
+annotation are -> @Configuration, @EnableAutoConfiguration, @ComponentScan
+2...@Controller is used for MVC applications that return views, while @RestController is used for REST APIs and returns data directly. @RestController internally combines @Controller and @ResponseBody.
+
+lecture 8 skip ..jsp
+lecture 9 
+**ORM** is a concept that maps objects to database tables,
+**JPA** is a Java specification that defines standard rules for ORM,
+and **Hibernate** is an ORM framework that implements JPA and provides the actual database operations.
+------------------------------------------------------------------------
+lecture 11-20----
+
+Spring data supports keywords ;;;;
+https://docs.spring.io/spring-data/jpa/docs/current-SNAPSHOT/reference/html/#reference
+This is the documentation ...
+
+lecture 15 customqueryfinder
+    @Query(value = "SELECT * FROM GETCASH_USER", nativeQuery = true)
+    List<UserEntity> findAllUsers();
+    
+    @Query(value = "SELECT * FROM GETCASH_USER u where u.username =:name ", nativeQuery = true)
+	List<UserEntity> findAllUsersByName(@Param("name") String name);
+
+    
+    
+
